@@ -2,12 +2,12 @@ import os
 from box.exceptions import BoxValueError
 import yaml
 from mlopsProject.logging import logger
-from ensure import ensuree_annotations
+from ensure import ensure_annotations
 from box import ConfigBox
 from pathlib import Path
 from typing import Any
 
-@ensuree_annotations
+@ensure_annotations
 def read_yaml(filepath: Path) -> ConfigBox:
     """
     Read yaml file and return a ConfigBox object.
@@ -32,8 +32,8 @@ def read_yaml(filepath: Path) -> ConfigBox:
     except Exception as e:
         raise e
     
-@ensuree_annotations
-def create_directory(dirpaths: list, verbose = True) -> None:
+@ensure_annotations
+def create_directory(dirpaths: list, verbose = True):
     """
     Create list of directories
 

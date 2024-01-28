@@ -1,5 +1,8 @@
 transformers
 transformers[sentencepiece]
+tensorflow
+evaluate
+bert_score
 datasets
 py7zr
 pandas
