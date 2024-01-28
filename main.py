@@ -2,6 +2,7 @@ from mlopsProject.logging import logger
 from mlopsProject.pipeline.stage_01_data_ingestion import DataIngestionTrainingPipeline
 from mlopsProject.pipeline.stage_02_data_validation import DataValidationTrainingPipeline
 from mlopsProject.pipeline.stage_03_data_preprocessing import DataPreprocessingTrainingPipeline
+from mlopsProject.pipeline.stage_04_model_trainer import ModelTrainerTrainingPipeline
 
 STAGE_NAME = "Data ingestion stage"
 
@@ -31,6 +32,17 @@ try:
     logger.info(f"############# Starting execution of {STAGE_NAME} #############")
     data_preprocessing = DataPreprocessingTrainingPipeline()
     data_preprocessing.main()
+    logger.info(f"############# Finished execution of {STAGE_NAME} #############")
+except Exception as e:
+    logger.exception(e)
+    raise e
+
+STAGE_NAME = "Model training stage"
+
+try:
+    logger.info(f"############# Starting execution of {STAGE_NAME} #############")
+    model_training = ModelTrainerTrainingPipeline()
+    model_training.main()
     logger.info(f"############# Finished execution of {STAGE_NAME} #############")
 except Exception as e:
     logger.exception(e)

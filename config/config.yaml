@@ -17,3 +17,8 @@ data_preprocessing:
   root_dir: artifacts/data_preprocessing
   data_path: artifacts/data_ingestion/qag_data
   tokenizer_name: google/flan-t5-small
+
+model_trainer:
+  root_dir: artifacts/model_trainer
+  data_path: artifacts/data_preprocessing/tokenized_dataset
+  model_ckpt: google/flan-t5-small
