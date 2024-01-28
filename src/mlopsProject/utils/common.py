@@ -6,6 +6,9 @@ from ensure import ensure_annotations
 from box import ConfigBox
 from pathlib import Path
 from typing import Any
+from datasets import Dataset
+import pandas as pd
+import jsonlines
 
 @ensure_annotations
 def read_yaml(filepath: Path) -> ConfigBox:
@@ -62,3 +65,19 @@ def get_size(path: Path) -> str:
     size_in_kb = round(os.path.getsize(path) / 1024, 3)
     return f"approx {size_in_kb} KB"
 
+def read_jsonl_to_dataset(path : Path) -> Dataset:
+    """
+    Read jsonl file and return a Dataset object.
+
+    Args:
+        path (Path): path to jsonl file
+    
+    Returns:
+        Dataset: Dataset type
+    """
+    data = []
+    with jsonlines.open(path) as reader:
+        for obj in reader:
+            data.append(obj)
+    df = pd.DataFrame(data)
+    return Dataset.from_dict(df.to_dict('list'))

@@ -1,6 +1,6 @@
 from mlopsProject.constants import *
 from mlopsProject.utils.common import read_yaml, create_directory
-from mlopsProject.entity import DataIngestionConfig, DataValidationConfig
+from mlopsProject.entity import DataIngestionConfig, DataValidationConfig, DataPreprocessingConfig
 
 class ConfigurationManager:
     def __init__(
@@ -41,3 +41,17 @@ class ConfigurationManager:
         )
 
         return data_validation_config
+    
+    def get_data_preprocessing_config(self) -> DataPreprocessingConfig:
+        
+        config = self.config.data_preprocessing
+
+        create_directory([config.root_dir])
+
+        data_preprocessing_config = DataPreprocessingConfig(
+            root_dir = config.root_dir,
+            data_path = config.data_path,
+            tokenizer_name = config.tokenizer_name
+        )
+
+        return data_preprocessing_config

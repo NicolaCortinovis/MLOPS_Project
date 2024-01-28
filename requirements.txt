@@ -4,6 +4,7 @@ tensorflow
 evaluate
 bert_score
 datasets
+jsonlines
 py7zr
 pandas
 nltk
