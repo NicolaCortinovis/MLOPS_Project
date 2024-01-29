@@ -120,6 +120,8 @@ We should create a bunch of demo notebooks that will simulate what happens insid
  - `data_validation.ipynb` needed?
  - `data_transformation.ipynb` needed?
  - `model_trainer.ipynb`  uses `GridSearch` from `lmqg` library (maybe think how to connect it to Neptune). Explore what params exist for our model and what to add to GridSearch, also check if there exist a way to print results at the end of each epoch.
+   ### updated
+    `model_trainer.ipynb`  uses `Trainer` class from Hugging Face to train the flan-T5-small model 
  - `model_evaluation.ipynb` refer to https://github.com/asahi417/lm-question-generation
 
 ### Implementate demo in components ⏳
