@@ -74,7 +74,10 @@ class ConfigurationManager:
             logging_steps = params.logging_steps,
             evaluation_strategy = params.evaluation_strategy,
             eval_steps = params.eval_steps,
-            gradient_accumulation_steps = params.gradient_accumulation_steps
+            gradient_accumulation_steps = params.gradient_accumulation_steps,
+            per_device_eval_batch_size = params.per_device_eval_batch_size,
+            predict_with_generate = params.predict_with_generate,
+            eval_dataset_dimension = params.eval_dataset_dimension
         )
 
         return model_trainer_config
