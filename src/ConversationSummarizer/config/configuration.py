@@ -1,6 +1,7 @@
 from ConversationSummarizer.constants import *
 from ConversationSummarizer.utils.common import read_yaml, create_directories
 from ConversationSummarizer.entity import DataIngestionConfig
+from ConversationSummarizer.entity import DataValidationConfig
 
 # Define a class for managing configurations
 class ConfigurationManager:
@@ -35,3 +36,22 @@ class ConfigurationManager:
         
         # Return the DataIngestionConfig object
         return data_ingestion_config
+
+# Define a method for getting the data validation configuration
+    def get_data_validation_config(self) -> DataValidationConfig:
+        
+        # Get the data validation configuration from the config file
+        config = self.config.data_validation
+        
+        # Create the root directory for data validation, if it doesn't already exist
+        create_directories([config.root_dir])
+        
+        # Create a DataIngestionConfig object with the configuration values
+        data_validation_config = DataValidationConfig(
+            root_dir = config.root_dir,
+            STATUS_FILE = config.STATUS_FILE,
+            ALL_REQUIRED_FILES = config.ALL_REQUIRED_FILES
+        )
+        
+        # Return the DataValidationConfig object
+        return data_validation_config
