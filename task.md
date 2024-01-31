@@ -36,11 +36,17 @@ Martin wrote a short review and won 2 cinema tickets on FB. Martin wants Aggie t
 
 Not all tasks need to follow a sequential approach, we can tackle them however we see fit. In fact both `.ipynb` and `streamlit` demo interface can be implemented independently. Comment thoroughly to help everyone understand what you're doing.
 
-### Create github repo ✓
+For this file:
+
+ - ⏳ means work in progress
+ - ✅ means done
+ - 🔍 means there is a note present
+
+### Create github repo ✅
 
 https://github.com/NicolaCortinovis/MLOPS_Project
 
-### Write the structure logic ✓
+### Write the structure logic ✅
 
 ```
 # Directory structure
@@ -79,37 +85,52 @@ https://github.com/NicolaCortinovis/MLOPS_Project
 └── template.py
 ```
 
-### Write the requirements ⏳
+### Write the requirements 🔍
 
-For now we can stick with the requirements used in video `lmqg` and `streamlit`. Eventually it must contain only the required packages.
-This will be used to create a `conda` environment from which we'll install a custom package containing everything we need to run the app.
+Contains a first batch of packages that could be useful (according to our tests) for running our app. This will be used to create a `conda` environment from which we'll install a custom package containing everything we need to run the app.
+
+#### Note
+
+Still lacking the packages needed for the app
 
 ### Project setup ⏳
 
-### Logging ⏳
+Write the `setup.py` file that is required to install the package as a custom local package in order to facilitate the execution of the app
+
+### Logging 
+
+Write a logging system for the project
 
 ### Exceptions ⏳
 
+Write an exception handler for the project
+
+
 ### Utils models ⏳
+
+Write a file containing common functions usded in different parts of the app
 
 ###  Demo notebooks ⏳
 
-We should create a bunch of demo notebooks that will simulate what happens inside each file in `src/mlopsProject/components`. Refer to [video](https://www.youtube.com/watch?v=p7V4Aa7qEpw) for the blueprint (given below)
+We should create a bunch of demo notebooks that will simulate what happens inside each file in `src/ConversationSummarizer/components`.
 
- - `data_ingestion.ipynb` data from [dataset](https://huggingface.co/datasets/lmqg/qag_squad])
- - `data_validation.ipynb` needed?
- - `data_transformation.ipynb` needed?
- - `model_trainer.ipynb`  uses `GridSearch` from `lmqg` library (maybe think how to connect it to Neptune). Explore what params exist for our model and what to add to GridSearch, also check if there exist a way to print results at the end of each epoch.
- - `model_evaluation.ipynb` refer to https://github.com/asahi417/lm-question-generation
-    ### updated
-    `model_trainer.ipynb`  uses `Trainer` class from Hugging Face to train the flan-T5-small model 
+We can follow a structure based on the following steps:
 
-### Implementate demo in components ⏳
+    - data ingestion (get the data)
+    - data validation (check that the data is the correct one)
+    - data transformation (manipulate the data so that it can be handled for the next step)
+    - model trainer (train the model on the transformed data)
+    - model evaluation (evaluate the model on some metrics)
 
-Can be done in parallel with the previous tep
+
+### Implement demo in components ⏳
+
+Can and should be done in parallel with the previous step since each passage is needed for the next one
 
 ### Develop user app ⏳
 
-Link everything with `streamlit`
+Link everything
 
 ### Project CI/CD deployement on AWS ⏳
+
+To be discussed
