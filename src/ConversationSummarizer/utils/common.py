@@ -69,22 +69,6 @@ def get_size(path: Path) -> str:
     Args:
         path (Path): path of the file
 
-    Returns:
-        str: size in KB
-    """
-    # Get the size of the file in KB rounded to 4 decimals
-    size_in_kb = round(os.path.getsize(path)/1024, 4)
-    return f"~ {size_in_kb} KB"
-
-
-@ensure_annotations
-def get_size(path: Path) -> str:
-    """
-    Get the size of a file in KB
-
-    Args:
-        path (Path): path of the file
-
     Raises:
         FileNotFoundError: if the path does not exist or is not a file
 
