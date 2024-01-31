@@ -2,6 +2,7 @@ from ConversationSummarizer.constants import *
 from ConversationSummarizer.utils.common import read_yaml, create_directories
 from ConversationSummarizer.entity import DataIngestionConfig
 from ConversationSummarizer.entity import DataValidationConfig
+from ConversationSummarizer.entity import DataTransformationConfig
 
 # Define a class for managing configurations
 class ConfigurationManager:
@@ -55,3 +56,22 @@ class ConfigurationManager:
         
         # Return the DataValidationConfig object
         return data_validation_config
+
+# Define a method for getting the data transformation configuration
+    def get_data_transformation_config(self) -> DataTransformationConfig:
+        
+        # Get the data transformation configuration from the config file
+        config = self.config.data_transformation
+        
+        # Create the root directory for data transformation, if it doesn't already exist
+        create_directories([config.root_dir])
+        
+        # Create a DataTransformationConfig object with the configuration values
+        data_transformation_config = DataTransformationConfig(
+            root_dir = config.root_dir,
+            data_path = config.data_path,
+            tokenizer_name = config.tokenizer_name
+        )
+        
+        # Return the DataTransformationConfig object
+        return data_transformation_config
