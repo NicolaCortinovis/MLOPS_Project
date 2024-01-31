@@ -115,11 +115,11 @@ We should create a bunch of demo notebooks that will simulate what happens insid
 
 We can follow a structure based on the following steps:
 
-    - data ingestion (get the data)
-    - data validation (check that the data is the correct one)
-    - data transformation (manipulate the data so that it can be handled for the next step)
-    - model trainer (train the model on the transformed data)
-    - model evaluation (evaluate the model on some metrics)
+    - data ingestion (get the data) ⏳
+    - data validation (check that the data is the correct one)  ⏳
+    - data transformation (manipulate the data so that it can be handled for the next step) ⏳
+    - model trainer (train the model on the transformed data) ⏳
+    - model evaluation (evaluate the model on some metrics) ⏳
 
 
 ### Implement demo in components ⏳
