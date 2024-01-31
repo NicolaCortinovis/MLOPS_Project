@@ -1,6 +1,8 @@
 # MLOPS_Project
 
-## Workflows
+## ConversationSummarizer
+
+### Workflows
 
 1. Update config.yaml
 2. Update params.yaml
