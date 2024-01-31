@@ -10,7 +10,7 @@ with open("README.md","r", encoding= "utf-8") as f:
 
 __version__ = "0.0.0"
 
-REPO_NAME = "https://github.com/NicolaCortinovis/MLOPS_Project"
+REPO_NAME = "ConversationSummarizer" 
 SRC_REPO = "mlopsProject"
 AUTHOR_USER_NAME = "NicolaCortinovis, Erionis, annalisapaladino, lucapernice"
 AUTHOR = "Cortinovis Nicola, Islamay Erion, Paladino Annalisa, Pernice Luca"
@@ -19,7 +19,7 @@ AUTHOR_EMAIL = "nicolacortinovis98@gmail.com" # to be filled
 # Setting up the package
 
 setuptools.setup(
-    name = SRC_REPO,
+    name = SRC_REPO,                                                
     version = __version__,
     author = AUTHOR,
     author_email = AUTHOR_EMAIL,
