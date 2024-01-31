@@ -109,7 +109,7 @@ Write an exception handler for the project. Actually we can use `box.exceptions`
 
 Write a file containing common functions used in different parts of the app
 
-###  Demo notebooks ⏳
+###  Demo notebooks ✅
 
 We should create a bunch of demo notebooks that will simulate what happens inside each file in `src/ConversationSummarizer/components`.
 
