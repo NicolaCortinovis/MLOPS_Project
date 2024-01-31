@@ -1,6 +1,6 @@
 ## Baseline task definition
 
-Develop an application where you can input a conversation to generate a summary. Immediately below we give an example of its functionality:
+Develop an application where you can input a conversation to generate a summary. Below we give an example of its functionality:
 
 ### Chat:
 
