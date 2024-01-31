@@ -93,11 +93,11 @@ Contains a first batch of packages that could be useful (according to our tests)
 
 Still lacking the packages needed for the app
 
-### Project setup ⏳
+### Project setup ✅
 
 Write the `setup.py` file that is required to install the package as a custom local package in order to facilitate the execution of the app
 
-### Logging 
+### Logging ✅
 
 Write a logging system for the project
 
