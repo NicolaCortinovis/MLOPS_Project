@@ -101,14 +101,13 @@ Write the `setup.py` file that is required to install the package as a custom lo
 
 Write a logging system for the project
 
-### Exceptions ⏳
+### Exceptions ✅
 
-Write an exception handler for the project
+Write an exception handler for the project. Actually we can use `box.exceptions` to handle them in a easier way
 
+### Utils models ✅
 
-### Utils models ⏳
-
-Write a file containing common functions usded in different parts of the app
+Write a file containing common functions used in different parts of the app
 
 ###  Demo notebooks ⏳
 
