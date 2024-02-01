@@ -115,20 +115,26 @@ We should create a bunch of demo notebooks that will simulate what happens insid
 
 We can follow a structure based on the following steps:
 
-    - data ingestion (get the data) ⏳
-    - data validation (check that the data is the correct one)  ⏳
-    - data transformation (manipulate the data so that it can be handled for the next step) ⏳
+    - data ingestion (get the data) ✅
+    - data validation (check that the data is correct)  ✅
+    - data transformation (manipulate the data so that it can be handled for the next step) ✅
     - model trainer (train the model on the transformed data) ⏳
     - model evaluation (evaluate the model on some metrics) ⏳
 
 
 ### Implement demo in components ⏳
 
-Can and should be done in parallel with the previous step since each passage is needed for the next one
+Can and should be done in parallel with the previous step since each passage is needed for the next one:
+
+    - data ingestion  ✅
+    - data validation  ✅
+    - data transformation  ✅
+    - model trainer ⏳
+    - model evaluation  ⏳
 
 ### Develop user app ⏳
 
-Link everything
+Link everything to an app
 
 ### Project CI/CD deployement on AWS ⏳
 
