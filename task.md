@@ -39,10 +39,10 @@ Not all tasks need to follow a sequential approach, we can tackle them however w
 ## Stuff to do
  - MlOps buddy update (E)
  - Steps 4 e 5 pipeline (training  & eval) + prediction pipeline (E)
- - WanDB (also for uploading logs) (E + N)
+ - WanDB (also for uploading logs) (N) (salva tutte le info durante il training e le spara nell UI di wandb)
  - Streamlit integration (app.py) -> chainlit chatbot style or whatever (A + L)
  - Upload model on huggingface (also check how to use .env on github) (E + N)
- - Reports: 
+ - Reports: deadline 5/02
 
 For this file:
 
