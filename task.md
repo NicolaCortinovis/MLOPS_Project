@@ -36,6 +36,14 @@ Martin wrote a short review and won 2 cinema tickets on FB. Martin wants Aggie t
 
 Not all tasks need to follow a sequential approach, we can tackle them however we see fit. In fact both `.ipynb` and `streamlit` demo interface can be implemented independently. Comment thoroughly to help everyone understand what you're doing.
 
+## Stuff to do
+ - MlOps buddy update (E)
+ - Steps 4 e 5 pipeline (training  & eval) + prediction pipeline (E)
+ - WanDB (also for uploading logs) (E + N)
+ - Streamlit integration (app.py) -> chainlit chatbot style or whatever (A + L)
+ - Upload model on huggingface (also check how to use .env on github) (E + N)
+ - Reports: 
+
 For this file:
 
  - ⏳ means work in progress
