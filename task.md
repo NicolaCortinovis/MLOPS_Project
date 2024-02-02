@@ -143,7 +143,3 @@ Can and should be done in parallel with the previous step since each passage is 
 ### Develop user app ⏳
 
 Link everything to an app
-
-### Project CI/CD deployement on AWS ⏳
-
-To be discussed
