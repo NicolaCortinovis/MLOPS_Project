@@ -13,7 +13,7 @@ REPO_NAME = "ConversationSummarizer"
 SRC_REPO = "mlopsProject"
 AUTHOR_USER_NAME = "NicolaCortinovis, Erionis, annalisapaladino, lucapernice"
 AUTHOR = "Cortinovis Nicola, Islamay Erion, Paladino Annalisa, Pernice Luca"
-AUTHOR_EMAIL = "nicolacortinovis98@gmail.com" # to be filled
+AUTHOR_EMAIL = "nicolacortinovis98@gmail.com, erion.islamay@gmail.com" # to be filled
 
 # Setting up the package, contains the metadata for the package
 
