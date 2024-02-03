@@ -35,3 +35,24 @@ try:
 except Exception as e:
     logger.exception(f"{STAGE} failed with the following exception: {e}")
     raise
+
+STAGE_NAME = "Model Trainer stage"
+try: 
+    logger.info(f"@@@@@@@@@@@@ Completed {STAGE} @@@@@@@@@@@@")
+    model_trainer = ModelTrainerTrainingPipeline()
+    model_trainer.main()
+    logger.info(f"@@@@@@@@@@@@ Completed {STAGE} @@@@@@@@@@@@")
+except Exception as e:
+        logger.exception(e)
+        raise e
+
+
+STAGE_NAME = "Model Evaluation stage"
+try: 
+    logger.info(f"@@@@@@@@@@@@ Starting {STAGE} @@@@@@@@@@@@")
+    model_evaluation = ModelEvaluationTrainingPipeline()
+    model_evaluation.main()
+    logger.info(f"@@@@@@@@@@@@ Completed {STAGE} @@@@@@@@@@@@")
+except Exception as e:
+        logger.exception(e)
+        raise e
