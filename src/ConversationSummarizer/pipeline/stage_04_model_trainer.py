@@ -1,6 +1,6 @@
-from textSummarizer.config.configuration import ConfigurationManager
-from textSummarizer.conponents.model_trainer import ModelTrainer
-from textSummarizer.logging import logger
+from ConversationSummarizer.config.configuration import ConfigurationManager
+from ConversationSummarizer.components.model_trainer import ModelTrainer
+from ConversationSummarizer.logging import logger
 
 
 class ModelTrainerTrainingPipeline:

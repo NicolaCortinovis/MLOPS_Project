@@ -22,24 +22,25 @@ class DataTransformationConfig:
     
 @dataclass(frozen=True)
 class ModelTrainerConfig:
-    root_dir: Path
-    data_path: Path
-    model_ckpt: Path
-    num_train_epochs: int
-    warmup_steps: int
-    per_device_train_batch_size: int
-    weight_decay: float
-    logging_steps: int
-    evaluation_strategy: str
-    eval_steps: int
-    save_steps: float
-    gradient_accumulation_steps: int
+    root_dir: Path              # The root directory where the model and data are stored
+    data_path: Path             # The path to the data for training and evaluation
+    model_ckpt: Path            # The path to the model checkpoint
+    num_train_epochs: int       # The number of epochs for training
+    warmup_steps: int           # The number of steps for the warmup phase
+    per_device_train_batch_size: int  # The batch size for training per device
+    per_device_eval_batch_size: int   # The batch size for evaluation per device
+    weight_decay: float         # The weight decay for the optimizer
+    logging_steps: int          # The number of steps between each logging
+    evaluation_strategy: str    # The strategy to use for evaluation
+    eval_steps: int             # The number of steps between each evaluation
+    save_steps: int             # The number of steps between each model saving
+    gradient_accumulation_steps: int  # The number of steps to accumulate gradients before performing an optimization step
 
 
 @dataclass(frozen=True)
 class ModelEvaluationConfig:
-    root_dir: Path
-    data_path: Path
-    model_path: Path
-    tokenizer_path: Path
-    metric_file_name: Path
+    root_dir: Path  # The root directory where the model and data are stored
+    data_path: Path  # The path to the data for evaluation
+    model_path: Path  # The path to the trained model
+    tokenizer_path: Path  # The path to the tokenizer used in the model
+    metric_file_name: Path  # The name of the file where the evaluation metrics will be stored

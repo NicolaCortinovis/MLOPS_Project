@@ -3,6 +3,8 @@ from ConversationSummarizer.utils.common import read_yaml, create_directories
 from ConversationSummarizer.entity import DataIngestionConfig
 from ConversationSummarizer.entity import DataValidationConfig
 from ConversationSummarizer.entity import DataTransformationConfig
+from ConversationSummarizer.entity import ModelTrainerConfig
+from ConversationSummarizer.entity import ModelEvaluationConfig
 
 # Define a class for managing configurations
 class ConfigurationManager:

@@ -1,9 +1,13 @@
 import streamlit as st
 import requests
+import os
+from dotenv import load_dotenv
+load_dotenv()
 
 
-API_URL = "https://api-inference.huggingface.co/models/Feluda/pegasus-samsum"
-headers = {"Authorization": "Bearer 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"}
+
+API_URL = "https://api-inference.huggingface.co/models/Nicovis/ConvSum"
+headers = {"Authorization": "Bearer "+ os.getenv("HUGGINGFACE_API_TOKEN")}
 
 def query(payload):
     response = requests.post(API_URL, headers=headers, json=payload)
