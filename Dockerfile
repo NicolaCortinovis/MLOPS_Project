@@ -1,14 +1,13 @@
-FROM python:3.9.18
+FROM python:3.8-slim-buster
 
-WORKDIR /streamlit_app
+RUN apt update -y && apt install awscli -y
+WORKDIR /app
 
-COPY /streamlit_app /streamlit_app
+COPY . /app
 
-RUN pip install --upgrade pip \
-    pip install -r requirements.txt
+RUN pip install -r requirements.txt
+RUN pip install --upgrade accelerate
+RUN pip uninstall -y transformers accelerate
+RUN pip install transformers accelerate
 
-EXPOSE 8501
-
-HEALTHCHECK CMD curl --fail http://localhost:8501/_stcore/health
-
-ENTRYPOINT ["streamlit", "run", "streamlit_app.py", "--server.port=8501", "--server.address=0.0.0.0"]
+CMD ["python3", "app.py"]
