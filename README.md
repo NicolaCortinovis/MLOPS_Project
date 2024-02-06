@@ -2,6 +2,8 @@
 
 ## ConversationSummarizer
 
+Model page on huggingface: https://huggingface.co/Nicovis/ConvSum
+
 ### Workflows
 
 1. Update config.yaml
