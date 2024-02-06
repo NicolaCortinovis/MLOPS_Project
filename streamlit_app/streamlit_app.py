@@ -4,10 +4,8 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
-api_key = os.environ.get('HUGGINGFACE_API')
-
 API_URL = "https://api-inference.huggingface.co/models/Nicovis/ConvSum"
-headers = {"Authorization": "Bearer "+ api_key}
+headers = {"Authorization": "Bearer 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"} # Need to hide this
 
 def query(payload):
     response = requests.post(API_URL, headers=headers, json=payload)
