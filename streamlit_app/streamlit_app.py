@@ -4,10 +4,10 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
-
+api_key = os.environ.get('HUGGINGFACE_API')
 
 API_URL = "https://api-inference.huggingface.co/models/Nicovis/ConvSum"
-headers = {"Authorization": "Bearer "+ os.getenv("HUGGINGFACE_API_TOKEN")}
+headers = {"Authorization": "Bearer "+ api_key)}
 
 def query(payload):
     response = requests.post(API_URL, headers=headers, json=payload)
