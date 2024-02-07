@@ -1,8 +1,6 @@
 import streamlit as st
 import requests
 import os
-from dotenv import load_dotenv
-load_dotenv()
 
 HUGGINGFACE_API_KEY = os.environ["HF_API"]
 
