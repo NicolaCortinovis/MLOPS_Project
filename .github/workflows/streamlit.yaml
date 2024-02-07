@@ -20,5 +20,6 @@ jobs:
 
       - name: Run Streamlit Script
         run: |
-          pip install -r requirements.txt
-          python streamlit_app/streamlit_app.py
+          cd streamlit_app
+          pip install -r streamlit_requirements.txt
+          python streamlit_app.py
