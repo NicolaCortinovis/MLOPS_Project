@@ -9,7 +9,7 @@ HUGGINGFACE_API_KEY = os.environ["HF_API"]
 API_URL = "https://api-inference.huggingface.co/models/Nicovis/ConvSum"
 headers = {"Authorization": "Bearer " + HUGGINGFACE_API_KEY} # Need to hide this
 
-print(HUGGINGFACE_API_KEY)
+print(f"The api key is: {HUGGINGFACE_API_KEY}")
 
 # def query(payload):
 #     response = requests.post(API_URL, headers=headers, json=payload)
