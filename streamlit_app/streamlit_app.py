@@ -4,7 +4,7 @@ import os
 from dotenv import load_dotenv
 load_dotenv()
 
-HUGGINGFACE_API_KEY = os.environ["HF_API"]
+# HUGGINGFACE_API_KEY = os.environ["HF_API"]
 
 API_URL = "https://api-inference.huggingface.co/models/Nicovis/ConvSum"
 headers = {"Authorization": "Bearer " + st.secrets["HUGGINGFACE_API_KEY"]} # if local use your hf api key in .env file
