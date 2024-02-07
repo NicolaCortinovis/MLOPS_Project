@@ -23,3 +23,5 @@ jobs:
           cd streamlit_app
           pip install streamlit==1.30.0 requests==2.31.0
           python streamlit_app.py
+          env:
+            HF_API : ${{ secrets.HUGGINGFACE_API_TOKEN }}
