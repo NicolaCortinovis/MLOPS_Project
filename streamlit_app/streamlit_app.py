@@ -7,7 +7,7 @@ load_dotenv()
 HUGGINGFACE_API_KEY = os.environ["HF_API"]
 
 API_URL = "https://api-inference.huggingface.co/models/Nicovis/ConvSum"
-headers = {"Authorization": "Bearer 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"} 
+headers = {"Authorization": "Bearer " + HUGGINGFACE_API_KEY} 
 
 
 def query(payload):
